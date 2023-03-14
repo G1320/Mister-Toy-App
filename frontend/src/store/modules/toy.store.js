@@ -1,59 +1,61 @@
-import { toyService } from '../../services/toy-service.js'
+import { toyService } from '../../services/toy-service.js';
 
 export const toyStore = {
-
   state: {
     toys: null,
+    // isSearchShown: false,
   },
   getters: {
     toysToDisplay({ toys }) {
-      return toys
-    }
+      return toys;
+    },
+    // isSearchShown() {
+    //   return isSearchShown;
+    // },
   },
   mutations: {
     setToys(state, { toys }) {
-      state.toys = toys
+      state.toys = toys;
     },
     removeToy(state, { toyId }) {
-      const idx = state.toys.findIndex(toy => toy._id === toyId)
-      state.toys.splice(idx, 1)
+      const idx = state.toys.findIndex((toy) => toy._id === toyId);
+      state.toys.splice(idx, 1);
     },
     addToy(state, { toy }) {
-      state.toys.unshift(toy)
+      state.toys.unshift(toy);
     },
     updateToy(state, { toy }) {
-      const idx = state.toys.findIndex(t => t._id === toy._id)
-      state.toys.splice(idx, 1, toy)
+      const idx = state.toys.findIndex((t) => t._id === toy._id);
+      state.toys.splice(idx, 1, toy);
     },
     setFilterBy(state, { filterBy }) {
-      state.filterBy = filterBy
+      state.filterBy = filterBy;
     },
+    // toggleFilterDisplay({ state }) {
+    //   state.isSearchShown = !state.isSearchShown;
+    // },
   },
   actions: {
     loadToys({ commit }, { filterBy }) {
       return toyService
         .query(filterBy)
-        .then(toys => {
-          commit({ type: 'setToys', toys })
+        .then((toys) => {
+          commit({ type: 'setToys', toys });
         })
-        .catch(err => {
-          console.log(err)
-        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
     removeToy({ commit }, { toyId }) {
-      return toyService
-        .remove(toyId)
-        .then(() => {
-          commit({ type: 'removeToy', toyId })
-        })
+      return toyService.remove(toyId).then(() => {
+        commit({ type: 'removeToy', toyId });
+      });
     },
     saveToy({ commit }, { toy }) {
-      const actionType = toy._id ? 'updateToy' : 'addToy'
-      return toyService
-        .save(toy)
-        .then(savedToy => {
-          commit({ type: actionType, toy: savedToy })
-        })
+      const actionType = toy._id ? 'updateToy' : 'addToy';
+      return toyService.save(toy).then((savedToy) => {
+        commit({ type: actionType, toy: savedToy });
+      });
     },
   },
-}
+};

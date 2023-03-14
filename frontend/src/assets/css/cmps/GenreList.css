@@ -1,4 +1,4 @@
-.toy-list{
+.genre-list{
     margin: auto;
     border-radius: var(--br-m);
     min-width: 55dvw;   
@@ -12,7 +12,7 @@
     gap: 0em;
 }
 
-.toy-list-top-content-container{
+.genre-list-top-content-container{
     grid-column: 1 / -1;    
     align-items: center;
     display: grid;
@@ -21,7 +21,7 @@
     text-align: ltr;
 }
 
-.toy-list-top-content-container * {
+.genre-list-top-content-container * {
 
     padding: 0.5em;
       height: 4em;
@@ -30,7 +30,7 @@
     border-radius: var(--br-m);
     transition: 300ms;
   }
-  .toy-list-top-content-container *:hover {
+  .genre-list-top-content-container *:hover {
     background-color: var(--clr5);
   }
 

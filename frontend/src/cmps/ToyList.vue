@@ -1,14 +1,12 @@
 <template>
   <ul v-if="toys.length" class="clean-list toy-list">
-    <article class="toy-list-wrapper-top-content">
+    <article class="toy-list-top-content-container">
       <h1>Our Toys</h1>
       <RouterLink class="btn btn-add" to="/toys/edit/">Add</RouterLink>
-    </article>
-
-    <article class="toy-list-wrapper-top-content">
-      <h1>Another Our Toys</h1>
-
-      Another piece of content
+      <div>Content</div>
+      <div>Content</div>
+      <div>Content</div>
+      <div>Content</div>
     </article>
 
     <ToyPreview

@@ -15,6 +15,7 @@ export default {
   },
 
   data() {
+    name: 'ToyDetails';
     return {
       toy: null,
     };

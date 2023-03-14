@@ -3,7 +3,7 @@
     <i>Hello</i>
     <i>Hello</i>
     <i>Hello</i>
-    <ToyFilter @setFilter="setFilter" />
+    <RouterLink to="/toys/search/">Search</RouterLink>
 
     <i>Hello</i>
     <i>Hello</i>
@@ -22,8 +22,6 @@
 </template>
 
 <script>
-import ToyFilter from '../cmps/ToysFilter.vue';
-
 export default {
   name: 'MainNav',
   data() {
@@ -36,9 +34,7 @@ export default {
   },
   computed: {},
   created() {},
-  components: {
-    ToyFilter,
-  },
+  components: {},
 };
 </script>
 

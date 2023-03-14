@@ -19,6 +19,7 @@ import ToyList from '../cmps/ToyList.vue';
 import ToyFilter from '../cmps/ToysFilter.vue';
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js';
 export default {
+  name: 'ToyIndex',
   methods: {
     removeToy(toyId) {
       this.$store
@@ -30,12 +31,12 @@ export default {
           showErrorMsg('Cannot remove toy');
         });
     },
-    
   },
   computed: {
     toys() {
       return this.$store.getters.toysToDisplay;
     },
+    methods: {},
   },
   components: {
     ToyList,

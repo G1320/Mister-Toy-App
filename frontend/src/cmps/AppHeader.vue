@@ -8,11 +8,33 @@
         |
       </nav>
     </div>
+    <ToyFilter @setFilter="setFilter" />
   </header>
 </template>
 
 <script>
+import ToyFilter from '../cmps/ToysFilter.vue';
+
 export default {
   name: 'AppHeader',
+  data() {
+    return {};
+  },
+  methods: {
+    setFilter(filterBy) {
+      this.$store.dispatch({ type: 'loadToys', filterBy });
+    },
+  },
+  computed: {
+    isSearchShown() {
+      // return this.$store.getters.isSearchShown;
+    },
+  },
+  created() {},
+  components: {
+    ToyFilter,
+  },
 };
 </script>
+
+<style></style>
