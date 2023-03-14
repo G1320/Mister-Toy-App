@@ -1,0 +1,25 @@
+
+
+.toy-preview{
+  background-color: var(--clr4);
+transition: 300ms;
+    text-align: ltr;
+    margin: 0.5em;
+    padding: var(--cell-padding);
+    max-width: 180px ;
+    max-height: 15dvh ;
+    min-height: 250px ;
+    border: var(--border0);
+    border-radius: var(--br-m);
+  }
+
+ 
+
+  .toy-preview:hover{
+    background-color: var(--clr5);
+  }
+
+
+  .tools-flex{
+    justify-content: space-between;
+ }

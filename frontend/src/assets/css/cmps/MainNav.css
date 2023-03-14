@@ -1,0 +1,10 @@
+.main-nav{
+    text-align: ltr     ;
+    min-width: 200px;
+    max-width: 100%;
+    height: 100%;
+    display: grid ;
+    /* border: var(--border0); */
+    border-radius: var(--br-m);
+}
+
