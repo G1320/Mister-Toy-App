@@ -1,22 +1,20 @@
 <template>
   <li class="toy-preview">
-    <img v-if="toy.imgUrl" :src="toy.imgUrl" />
+    <RouterLink :to="'/toys/details/' + toy._id" class="btn">
+      <img v-if="toy.imgUrl" :src="toy.imgUrl" />
 
-    <!-- <img v-if="'toy'" :src="'toy.imgUrl'" /> -->
-    <p>Toy Name: {{ toy.name }}</p>
-    <p>Toy Price: {{ toy.price }}</p>
+      <div class="detail-preview">
+        <button @click="$emit('removed')" class="btn">x</button>
 
-    <div class="tools flex">
-      <button @click="$emit('removed')" class="btn">
-        <span>x</span>
-      </button>
-      <RouterLink :to="'/toys/edit/' + toy._id" class="btn">
-        <span>Edit</span>
-      </RouterLink>
-      <RouterLink :to="'/toys/details/' + toy._id" class="btn">
-        <span>Details</span>
-      </RouterLink>
-    </div>
+        <!-- <img v-if="'toy'" :src="'toy.imgUrl'" /> -->
+        <div class="detail-preview-info">
+          <p>{{ toy.name }}</p>
+        </div>
+
+        <div class="tools"></div>
+        <RouterLink :to="'/toys/edit/' + toy._id" class="btn"> edit </RouterLink>
+      </div>
+    </RouterLink>
   </li>
 </template>
 

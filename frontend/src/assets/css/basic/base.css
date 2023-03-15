@@ -1,5 +1,6 @@
 html{
   background-color: var(--clr0);
+ 
 
 }
  body {
@@ -24,14 +25,15 @@ html{
     /* width: var(--main-content-width); */
 }
 
-.toys-app{
 
-}
 
 .main-content{
-
+  /* padding: 1ems; */
   display: grid;
   grid-template-rows: 120px 1fr;
+/* width: ; */
+     /* overflow-x: hidden;
+     overflow-y: hidden; */
 
   height: 100dvh;
   grid-template-columns: 0.25fr 1fr;
@@ -40,6 +42,6 @@ html{
 
 img {
   margin: auto;
-  height: 120px;
-  width: 120px;
+  height: 180px;
+  width: 180px;
 }

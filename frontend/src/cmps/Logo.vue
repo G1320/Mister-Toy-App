@@ -1,5 +1,7 @@
 <template>
-  <h1 class="logo">LOGO</h1>
+  <router-link to="/toys">
+    <h1 class="logo">LOGO</h1>
+  </router-link>
 </template>
 
 <script>

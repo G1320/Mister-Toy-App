@@ -92,7 +92,10 @@ function _createToy(name, price) {
     _id: utilService.makeId(),
     name,
     price,
-    labels: [],
+    labels:
+      Math.random() < 0.5
+        ? ['science', 'remote controlled', 'doll']
+        : ['Indie', 'remote controlled', 'doll'],
     createdAt: Date.now(),
     inStock: true,
     imgUrl: 'https://source.unsplash.com/random/?cats&4',

@@ -1,10 +1,12 @@
 <template>
   <header>
     <div class="main-header">
-      <ToyFilter @setFilter="setFilter" />
-      <section class="user-info">
-        <RouterLink to="/user">User Area</RouterLink>
-      </section>
+      <ToyFilter v-if="isFilterShown.isFilterShown" @setFilter="setFilter" />
+      <div v-else class="prev-next-btn-wrapper">
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+      </div>
+      <RouterLink to="/chart">User Area</RouterLink>
     </div>
   </header>
 </template>
@@ -16,7 +18,7 @@ export default {
   name: 'AppHeader',
   data() {
     return {
-      isSearchShown: false,
+      // isSearchShown: false,
     };
   },
   methods: {
@@ -25,8 +27,8 @@ export default {
     },
   },
   computed: {
-    isSearchShown() {
-      // return this.$store.getters.isSearchShown;
+    isFilterShown() {
+      return this.$store.getters.isFilterShown;
     },
   },
   created() {},

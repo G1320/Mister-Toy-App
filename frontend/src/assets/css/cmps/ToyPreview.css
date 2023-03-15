@@ -4,8 +4,9 @@
   background-color: var(--clr4);
 transition: 300ms;
     text-align: center;
-    margin: 0.5em;
+    margin: 2em 2em 2em 2em;
     padding: var(--cell-padding);
+    min-width: 180px ;
     max-width: 180px ;
     max-height: 15dvh ;
     min-height: 250px ;
@@ -20,6 +21,23 @@ transition: 300ms;
   }
 
 
-  .tools-flex{
-    justify-content: space-between;
+  .tools{
+    display: flex;
+    justify-content: space-around;
+ }
+  .tools button{
+   height: 50px;
+   width:  50px;
+ }
+
+ .toy-preview p{
+  margin-block-start: 0.2em;
+ }
+
+ .detail-preview{
+  height: 60px;
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  grid-template-rows:  1fr;
+
  }

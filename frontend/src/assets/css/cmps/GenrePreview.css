@@ -1,14 +1,15 @@
 
 
 .genre-preview{
+  /* cursor:pointer; */
   background-color: var(--clr4);
 transition: 300ms;
     text-align: ltr;
     margin: 0.5em;
     padding: var(--cell-padding);
-    max-width: 180px ;
-    max-height: 180px ;
-    /* min-height: 250px ; */
+    width: 140px ;
+    max-height: 200px ;
+    
     border: var(--border0);
     border-radius: var(--br-m);
   }
@@ -16,3 +17,12 @@ transition: 300ms;
   .genre-preview:hover{
     background-color: var(--clr5);
   }
+
+  .genre-preview p{
+margin-block-start: 0.0em;  
+}
+
+.genre-preview img {
+  width: 140px ;
+  height: 140px ;
+}

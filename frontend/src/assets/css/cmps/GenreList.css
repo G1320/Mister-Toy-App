@@ -3,12 +3,14 @@
     border-radius: var(--br-m);
     min-width: 55dvw;   
     height: 88dvh;
+    width: 100%;
     overflow: scroll;
      overflow-x: hidden;
     display: grid ;
     justify-content: space-evenly;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 0em;
 }
 

@@ -1,15 +1,16 @@
 <template>
   <li class="genre-preview">
-    <img v-if="toy.imgUrl" :src="toy.imgUrl" />
+    <RouterLink :to="'/toys/details/' + toy._id" class="btn">
+      <img v-if="toy.imgUrl" :src="toy.imgUrl" />
 
-    <p>Toy Name: {{ toy.name }}</p>
+      <p>Category {{ Math.random() < 0.5 ? toy.labels[0] : toy.labels[1] }}</p>
+    </RouterLink>
   </li>
 </template>
 
 <script>
 export default {
   name: 'GenrePreview',
-  emits: ['removed'],
   props: {
     toy: Object,
   },

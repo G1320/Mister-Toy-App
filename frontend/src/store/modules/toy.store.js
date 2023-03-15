@@ -3,15 +3,15 @@ import { toyService } from '../../services/toy-service.js';
 export const toyStore = {
   state: {
     toys: null,
-    // isSearchShown: false,
+    isFilterShown: false,
   },
   getters: {
     toysToDisplay({ toys }) {
       return toys;
     },
-    // isSearchShown() {
-    //   return isSearchShown;
-    // },
+    isFilterShown({ isFilterShown }) {
+      return isFilterShown;
+    },
   },
   mutations: {
     setToys(state, { toys }) {
@@ -31,9 +31,9 @@ export const toyStore = {
     setFilterBy(state, { filterBy }) {
       state.filterBy = filterBy;
     },
-    // toggleFilterDisplay({ state }) {
-    //   state.isSearchShown = !state.isSearchShown;
-    // },
+    toggleFilterShown(state, isFilterShown) {
+      state.isFilterShown = isFilterShown;
+    },
   },
   actions: {
     loadToys({ commit }, { filterBy }) {

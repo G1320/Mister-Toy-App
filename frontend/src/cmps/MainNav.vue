@@ -1,11 +1,14 @@
 <template>
   <section class="main-nav">
-    <h1>Header</h1>
+    <router-link @click="$store.commit({ type: 'toggleFilterShown', isFilterShown: false })" to="/toys"
+      >Home</router-link
+    >
 
-    <!-- <router-link to="/">Home</router-link> -->
-    <router-link to="/toys">Home</router-link>
-    <RouterLink to="/toys/search/">Search</RouterLink>
-    <router-link to="/chart">Chart</router-link>
+    <RouterLink
+      @click="$store.commit({ type: 'toggleFilterShown', isFilterShown: true })"
+      to="/toys/search/"
+      >Search</RouterLink
+    >
 
     <i>Hello</i>
     <i>Hello</i>
@@ -22,9 +25,7 @@
 export default {
   name: 'MainNav',
   data() {
-    return {
-      isSearchShown: false,
-    };
+    return {};
   },
   methods: {
     setFilter(filterBy) {
