@@ -2,13 +2,11 @@
   <header>
     <div class="main-header">
       <h1>Header</h1>
-      <nav class="main-van">
-        <router-link to="/">Home</router-link> | <router-link to="/toys">Our Toys</router-link> |
-        <router-link to="/chart">Chart</router-link>
-        |
-      </nav>
+      <ToyFilter @setFilter="setFilter" />
+      <section class="user-info">
+        <RouterLink to="/user">User Area</RouterLink>
+      </section>
     </div>
-    <ToyFilter @setFilter="setFilter" />
   </header>
 </template>
 
@@ -18,7 +16,9 @@ import ToyFilter from '../cmps/ToysFilter.vue';
 export default {
   name: 'AppHeader',
   data() {
-    return {};
+    return {
+      isSearchShown: false,
+    };
   },
   methods: {
     setFilter(filterBy) {
@@ -36,5 +36,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

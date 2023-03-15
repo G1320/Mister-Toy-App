@@ -1,15 +1,10 @@
 <template>
   <section class="main-nav">
-    <i>Hello</i>
-    <i>Hello</i>
-    <i>Hello</i>
+    <!-- <router-link to="/">Home</router-link> -->
+    <router-link to="/toys">Home</router-link>
     <RouterLink to="/toys/search/">Search</RouterLink>
+    <router-link to="/chart">Chart</router-link>
 
-    <i>Hello</i>
-    <i>Hello</i>
-    <i>Hello</i>
-    <i>Hello</i>
-    <i>Hello</i>
     <i>Hello</i>
     <i>Hello</i>
     <i>Hello</i>

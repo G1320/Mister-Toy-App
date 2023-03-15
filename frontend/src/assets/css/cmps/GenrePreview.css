@@ -13,13 +13,6 @@ transition: 300ms;
     border-radius: var(--br-m);
   }
 
- 
-
   .genre-preview:hover{
     background-color: var(--clr5);
   }
-
-
-  .tools-flex{
-    justify-content: space-between;
- }

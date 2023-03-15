@@ -1,0 +1,12 @@
+.main-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header input{
+    padding: 1em;
+    height: 1.5em;
+    width: 360px;
+    border-radius: 800px
+}
