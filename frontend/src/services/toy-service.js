@@ -95,5 +95,6 @@ function _createToy(name, price) {
     labels: [],
     createdAt: Date.now(),
     inStock: true,
+    imgUrl: 'https://source.unsplash.com/random/?cats&4',
   };
 }

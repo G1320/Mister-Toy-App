@@ -1,6 +1,7 @@
 <template>
   <section class="main">
-    <AppHeader />
+    <!-- <AppHeader /> -->
+
     <RouterView />
     <!-- <AppFooter /> -->
     <UserMessage />
@@ -16,7 +17,7 @@ export default {
     this.$store.dispatch({ type: 'loadToys' });
   },
   components: {
-    AppHeader,
+    // AppHeader,
     AppFooter,
     UserMessage,
   },

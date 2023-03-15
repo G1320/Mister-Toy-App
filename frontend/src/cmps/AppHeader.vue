@@ -1,7 +1,6 @@
 <template>
   <header>
     <div class="main-header">
-      <h1>Header</h1>
       <ToyFilter @setFilter="setFilter" />
       <section class="user-info">
         <RouterLink to="/user">User Area</RouterLink>

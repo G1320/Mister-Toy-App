@@ -2,8 +2,8 @@
     margin: auto;
     border-radius: var(--br-m);
     min-width: 55dvw;   
-     height: 100dvh;
-     overflow: scroll;
+    height: 88dvh;
+    overflow: scroll;
      overflow-x: hidden;
     display: grid ;
     justify-content: space-evenly;

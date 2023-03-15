@@ -1,8 +1,10 @@
 <template>
   <li class="toy-preview">
+    <img v-if="toy.imgUrl" :src="toy.imgUrl" />
+
+    <!-- <img v-if="'toy'" :src="'toy.imgUrl'" /> -->
     <p>Toy Name: {{ toy.name }}</p>
     <p>Toy Price: {{ toy.price }}</p>
-    <p>Toy ID: {{ toy._id }}</p>
 
     <div class="tools flex">
       <button @click="$emit('removed')" class="btn">

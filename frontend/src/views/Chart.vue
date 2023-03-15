@@ -1,5 +1,9 @@
 <template>
-  <section>
+  <section class="main-content">
+    <Logo />
+    <AppHeader />
+    <main-nav></main-nav>
+
     <BarChart :chartData="testData" :options="options" />
   </section>
 </template>
@@ -7,12 +11,15 @@
 <script lang="ts">
 import { BarChart } from 'vue-chart-3';
 import { Chart, registerables } from 'chart.js';
+import MainNav from '../cmps/MainNav.vue';
+import AppHeader from '../cmps/AppHeader.vue';
+import Logo from '../cmps/Logo.vue';
 
 Chart.register(...registerables);
 
 export default {
   name: 'Chart',
-  components: { BarChart },
+  components: { BarChart, MainNav, AppHeader, Logo },
   data() {
     return {
       options: {

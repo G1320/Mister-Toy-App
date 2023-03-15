@@ -1,19 +1,20 @@
 <template>
   <section class="main-content">
-    <main-nav></main-nav>
-    <main class="toys-app">
-      <!-- <article>
+    <Logo />
+    <AppHeader />
 
-      <h1>Our Toys</h1>
-      <RouterLink class="btn btn-add" to="/toys/edit/">Add</RouterLink>
-      <ToyFilter @setFilter="setFilter" />
-      </article> -->
+    <main-nav></main-nav>
+
+    <main class="toys-app">
       <ToyList v-if="toys" :toys="toys" @removed="removeToy" :class="'toy-list'" />
     </main>
   </section>
 </template>
 
 <script>
+import AppHeader from '../cmps/AppHeader.vue';
+import Logo from '../cmps/Logo.vue';
+
 import MainNav from '../cmps/MainNav.vue';
 import ToyList from '../cmps/ToyList.vue';
 import ToyFilter from '../cmps/ToysFilter.vue';
@@ -42,6 +43,8 @@ export default {
     ToyList,
     ToyFilter,
     MainNav,
+    AppHeader,
+    Logo,
   },
 };
 </script>

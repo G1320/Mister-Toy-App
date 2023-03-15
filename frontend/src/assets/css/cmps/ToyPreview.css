@@ -3,7 +3,7 @@
 .toy-preview{
   background-color: var(--clr4);
 transition: 300ms;
-    text-align: ltr;
+    text-align: center;
     margin: 0.5em;
     padding: var(--cell-padding);
     max-width: 180px ;

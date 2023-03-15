@@ -1,9 +1,9 @@
 :root {
-
-  --clr0: #191414; /* Base Site Color */
+--clr-blk: black;
+  --clr0: #0d0c0ff9; /* Base Site Color */
   --clr1: #1DB954; /* Base Site Color */
   --clr2: #5f6368; /* Base Site Color */
-  --clr4: #231e1e; /* Base Site Color */
+  --clr4: #181515; /* Base Site Color */
   --clr5: #302b2b; /* Base Site Color */
 
   --main-content-height: 60dvh;
@@ -20,7 +20,7 @@
 
   --color-text: aliceblue; 
 
-  --color-background:var(--clr0);
+  --color-background:#0d0c0ff9;
 
   --shadow: rgba(0, 0, 0, 0.39); /* Notes Shadow */
   --shadow2: rgba(0, 0, 0, 0.98); /* Header Shadow */

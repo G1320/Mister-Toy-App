@@ -1,5 +1,7 @@
 <template>
   <section class="main-nav">
+    <h1>Header</h1>
+
     <!-- <router-link to="/">Home</router-link> -->
     <router-link to="/toys">Home</router-link>
     <RouterLink to="/toys/search/">Search</RouterLink>
@@ -20,7 +22,9 @@
 export default {
   name: 'MainNav',
   data() {
-    return {};
+    return {
+      isSearchShown: false,
+    };
   },
   methods: {
     setFilter(filterBy) {

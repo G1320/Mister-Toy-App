@@ -1,5 +1,7 @@
 <template>
   <section class="main-content">
+    <Logo />
+    <AppHeader />
     <!-- <ToyFilter @setFilter="setFilter" /> -->
     <main-nav></main-nav>
     <GenreList v-if="toys" :toys="toys" :class="'genre-list'" />
@@ -10,7 +12,8 @@
 import ToyFilter from '../cmps/ToysFilter.vue';
 import GenreList from '../cmps/GenreList.vue';
 import MainNav from '../cmps/MainNav.vue';
-
+import AppHeader from '../cmps/AppHeader.vue';
+import Logo from '../cmps/Logo.vue';
 export default {
   name: 'SearchPage',
   data() {
@@ -31,6 +34,8 @@ export default {
     ToyFilter,
     GenreList,
     MainNav,
+    AppHeader,
+    Logo,
   },
 };
 </script>
