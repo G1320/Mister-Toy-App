@@ -2,7 +2,6 @@
   <header>
     <div class="main-header">
       <ToyFilter v-if="isFilterShown.isFilterShown" @setFilter="setFilter" />
-
       <div v-else class="prev-next-btn-wrapper">
         <button class="prev">Prev</button>
         <button class="next">Next</button>
