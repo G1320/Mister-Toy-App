@@ -9,7 +9,20 @@ export const toyStore = {
       inStock: false,
     },
     toys: null,
-    labels: ['Science', 'Remote controlled', 'Doll', 'Indie', 'Battery powered', 'Collectable'],
+    labels: [
+      'Science',
+      'Remote controlled',
+      'Doll',
+      'Indie',
+      'Battery powered',
+      'Collectable',
+      'Rare',
+      'Artsy',
+      'Challenging',
+      'Require practice',
+      'Indulgent',
+      'Impractical',
+    ],
   },
   getters: {
     toysToDisplay({ toys }) {

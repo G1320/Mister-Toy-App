@@ -5,6 +5,7 @@
       <div v-else class="prev-next-btn-wrapper">
         <button class="prev">Prev</button>
         <button class="next">Next</button>
+        <RouterLink class="btn btn-add" to="/toys/edit/">Add</RouterLink>
       </div>
       <RouterLink to="/chart">User Area</RouterLink>
     </div>

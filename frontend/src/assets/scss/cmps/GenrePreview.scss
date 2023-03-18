@@ -1,0 +1,24 @@
+$background-color_1: var(--clr4);
+$background-color_2: var(--clr5);
+
+.genre-preview {
+	background-color: $background-color_1;
+	transition: 300ms;
+	text-align: ltr;
+	margin: 0.5em;
+	padding: var(--cell-padding);
+	width: 140px;
+	max-height: 200px;
+	border: var(--border0);
+	border-radius: var(--br-m);
+	&:hover {
+		background-color: $background-color_2;
+	}
+	p {
+		margin-block-start: 0.0em;
+	}
+	img {
+		width: 140px;
+		height: 140px;
+	}
+}

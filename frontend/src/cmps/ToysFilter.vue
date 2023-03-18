@@ -27,7 +27,6 @@
       v-model="filterBy.inStock"
       @change="setFilter"
       label="Show only toys in stock"
-      style="width: 140px"
     />
   </section>
 </template>

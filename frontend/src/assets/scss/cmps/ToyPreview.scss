@@ -1,0 +1,33 @@
+.toy-preview {
+	background-color: var(--clr4);
+	transition: 300ms;
+	text-align: center;
+	margin: 2em 2em 2em 2em;
+	padding: var(--cell-padding);
+	min-width: 180px;
+	max-width: 180px;
+	max-height: 15dvh;
+	min-height: 250px;
+	border: var(--border0);
+	border-radius: var(--br-m);
+	&:hover {
+		background-color: var(--clr5);
+	}
+	p {
+		margin-block-start: 0.2em;
+	}
+}
+.tools {
+	display: flex;
+	justify-content: space-around;
+	button {
+		height: 50px;
+		width: 50px;
+	}
+}
+.detail-preview {
+	height: 60px;
+	display: grid;
+	grid-template-columns: 0.25fr 1fr;
+	grid-template-rows: 1fr;
+}
