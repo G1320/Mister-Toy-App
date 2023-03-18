@@ -5,14 +5,12 @@
 
       <div class="detail-preview">
         <button @click="$emit('removed')" class="btn">x</button>
-
-        <!-- <img v-if="'toy'" :src="'toy.imgUrl'" /> -->
         <div class="detail-preview-info">
           <p>{{ toy.name }}</p>
         </div>
 
-        <div class="tools"></div>
         <RouterLink :to="'/toys/edit/' + toy._id" class="btn"> edit </RouterLink>
+        <div class="tools"></div>
       </div>
     </RouterLink>
   </li>
@@ -24,6 +22,27 @@ export default {
   emits: ['removed'],
   props: {
     toy: Object,
+  },
+  data() {
+    return {
+      selectedLabels: [],
+      filterBy: {
+        name: '',
+        labels: [],
+        sort: 'name',
+        inStock: false,
+      },
+    };
+  },
+  methods: {
+    setFilter() {
+      this.$emit('setFilter', { ...this.filterBy });
+    },
+  },
+  computed: {
+    labels() {
+      return this.$store.getters.labels;
+    },
   },
 };
 </script>

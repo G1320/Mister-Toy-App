@@ -30,13 +30,13 @@ html{
 .main-content{
   /* padding: 1ems; */
   display: grid;
+  grid-template-columns: 0.15fr 1fr;
   grid-template-rows: 120px 1fr;
 /* width: ; */
      /* overflow-x: hidden;
      overflow-y: hidden; */
 
   height: 100dvh;
-  grid-template-columns: 0.25fr 1fr;
   gap: 1em;
 }
 

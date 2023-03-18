@@ -2,12 +2,21 @@ import { toyService } from '../../services/toy-service.js';
 
 export const toyStore = {
   state: {
-    toys: null,
     isFilterShown: false,
+    filterBy: {
+      labels: [],
+      sort: 'name',
+      inStock: false,
+    },
+    toys: null,
+    labels: ['Science', 'Remote controlled', 'Doll', 'Indie', 'Battery powered', 'Collectable'],
   },
   getters: {
     toysToDisplay({ toys }) {
       return toys;
+    },
+    labels(state) {
+      return state.labels;
     },
     isFilterShown({ isFilterShown }) {
       return isFilterShown;

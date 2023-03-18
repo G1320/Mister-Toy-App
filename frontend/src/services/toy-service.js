@@ -49,14 +49,38 @@ function getEmptyToy() {
 }
 
 function _filterToys(filterBy, toys) {
-  if (!filterBy) return toys;
-  const { name } = filterBy;
-
+  const { name, labels, sort, inStock } = filterBy;
+  // FILTER BY NAME
   const regex = new RegExp(name, 'i');
-  toys = toys.filter((toys) => regex.test(toys.name));
+  let filteredToys = toys.filter((toy) => regex.test(toy.name));
 
-  return toys;
+  // FILTER BY STOCK
+  if (inStock) filteredToys = filteredToys.filter((toy) => toy.inStock);
+
+  // FILTER BY LABELS
+  // if (labels.length) {
+  //   labels.map((lab) => {
+  //     return (filteredToys = filteredToys.filter((toy) => toy.labels.includes(lab)));
+  //   });
+  // }
+
+  // SORT
+  filteredToys.sort((toy1, toy2) =>
+    sort === 'name' ? toy1[sort].localeCompare(toy2[sort]) : toy1[sort] - toy2[sort]
+  );
+
+  return filteredToys;
 }
+
+// function _filterToys(filterBy, toys) {
+//   if (!filterBy) return toys;
+//   const { name } = filterBy;
+
+//   const regex = new RegExp(name, 'i');
+//   toys = toys.filter((toys) => regex.test(toys.name));
+
+//   return toys;
+// }
 
 function _createToys() {
   let toys = JSON.parse(localStorage.getItem(KEY));
@@ -94,8 +118,8 @@ function _createToy(name, price) {
     price,
     labels:
       Math.random() < 0.5
-        ? ['science', 'remote controlled', 'doll']
-        : ['Indie', 'remote controlled', 'doll'],
+        ? ['Science', 'Remote controlled', 'Doll']
+        : ['Indie', 'Battery powered', 'Collectable'],
     createdAt: Date.now(),
     inStock: true,
     imgUrl: 'https://source.unsplash.com/random/?cats&4',

@@ -22,6 +22,9 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js';
 export default {
   name: 'ToyIndex',
   methods: {
+    data() {
+      return {};
+    },
     removeToy(toyId) {
       this.$store
         .dispatch({ type: 'removeToy', toyId })

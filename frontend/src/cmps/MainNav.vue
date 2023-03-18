@@ -1,14 +1,14 @@
 <template>
+  <!-- prettier-ignore -->
   <section class="main-nav">
-    <router-link @click="$store.commit({ type: 'toggleFilterShown', isFilterShown: false })" to="/toys"
-      >Home</router-link
-    >
-
+    <router-link
+     @click="$store.commit({ type: 'toggleFilterShown', isFilterShown: false })" 
+     to="/toys">Home
+     </router-link>
     <RouterLink
       @click="$store.commit({ type: 'toggleFilterShown', isFilterShown: true })"
-      to="/toys/search/"
-      >Search</RouterLink
-    >
+      to="/toys/search/">Search
+      </RouterLink>
 
     <i>Hello</i>
     <i>Hello</i>
