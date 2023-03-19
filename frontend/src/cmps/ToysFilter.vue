@@ -1,5 +1,5 @@
 <template>
-  <section class="toy-filter">
+  <section class="toy-filter" style="width: 800px">
     <input
       v-model="filterBy.name"
       @input="setFilter"
@@ -15,7 +15,13 @@
       style="width: 140px"
       @change="setFilter"
     >
-      <el-option v-for="label in labels" :key="label" :label="label" :value="label" />
+      <el-option
+        v-for="label in labels"
+        :key="label"
+        :label="label"
+        :value="label"
+        style="width: 140px"
+      />
     </el-select>
     <el-select @change="setFilter" v-model="filterBy.sort">
       <el-option value="name">name</el-option>

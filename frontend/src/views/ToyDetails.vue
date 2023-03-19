@@ -21,11 +21,14 @@ export default {
       toy: null,
     };
   },
-  created() {
+  async created() {
     const { toyId } = this.$route.params;
-    toyService.getById(toyId).then((toy) => {
+    try {
+      const toy = await toyService.getById(toyId);
       this.toy = toy;
-    });
+    } catch (error) {
+      console.log('Error fetching toy: ', error);
+    }
   },
   methods: {
     goBack() {

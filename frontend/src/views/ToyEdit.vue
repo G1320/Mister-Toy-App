@@ -44,28 +44,31 @@ export default {
       toyToEdit: null,
     };
   },
-  created() {
+  async created() {
     const { toyId } = this.$route.params;
     if (toyId) {
       console.log('toyId: ', toyId);
-      toyService.getById(toyId).then((toy) => {
+      try {
+        const toy = await toyService.getById(toyId);
         this.toyToEdit = toy;
-      });
-    } else this.toyToEdit = toyService.getEmptyToy();
+      } catch (error) {
+        console.log('Error fetching toy: ', error);
+      }
+    } else {
+      this.toyToEdit = toyService.getEmptyToy();
+    }
   },
   methods: {
     goBack() {
       this.$router.push('/toys');
     },
-    saveToy() {
-      this.$store.dispatch({ type: 'saveToy', toy: this.toyToEdit }).then(() => {
+    async saveToy() {
+      try {
+        await this.$store.dispatch({ type: 'saveToy', toy: this.toyToEdit });
         this.$router.push('/toys');
-      });
-    },
-  },
-  computed: {
-    labels() {
-      return this.$store.getters.labels;
+      } catch (error) {
+        console.log('Error saving toy: ', error);
+      }
     },
   },
 };

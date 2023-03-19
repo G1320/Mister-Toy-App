@@ -25,15 +25,13 @@ export default {
     data() {
       return {};
     },
-    removeToy(toyId) {
-      this.$store
-        .dispatch({ type: 'removeToy', toyId })
-        .then(() => {
-          showSuccessMsg('toy removed');
-        })
-        .catch((err) => {
-          showErrorMsg('Cannot remove toy');
-        });
+    async removeToy(toyId) {
+      try {
+        await this.$store.dispatch({ type: 'removeToy', toyId });
+        showSuccessMsg('toy removed');
+      } catch (err) {
+        showErrorMsg('Cannot remove toy');
+      }
     },
   },
   computed: {
